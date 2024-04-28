@@ -7,5 +7,14 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     mode: 'none',
+
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    },
     // 添加其他配置项...
 }
