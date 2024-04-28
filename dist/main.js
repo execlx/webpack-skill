@@ -17633,6 +17633,12 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 12 */
+/***/ ((module) => {
+
+module.exports = "<h1>这个是个 md 的一号标题</h1>\n"
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -17739,6 +17745,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _about_md__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var _about_md__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_about_md__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -17746,10 +17754,13 @@ function component() {
   var element = document.createElement('div');
   element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'webpack'], ' ');
   element.classList.add('big-font');
+  element.innerHTML += (_about_md__WEBPACK_IMPORTED_MODULE_2___default());
   return element;
 }
 
 document.body.appendChild(component());
+
+
 })();
 
 /******/ })()
