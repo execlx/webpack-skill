@@ -27,6 +27,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Execl',
+            template: './src/index.html'
         })
     ]
     // 添加其他配置项...
