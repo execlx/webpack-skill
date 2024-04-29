@@ -6,6 +6,7 @@ function component() {
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
   element.classList.add('big-font');
   element.innerHTML += about;
+  // 这是一个测试注释
   return element;
 }
 

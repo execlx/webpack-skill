@@ -1,8 +1,10 @@
 const path = require('path');
+const webpack = require('webpack');
+
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-
+const RemoveCommentsPlugin = require('./custom-plugin/remove-comments-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -25,6 +27,7 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Execl',
@@ -37,7 +40,9 @@ module.exports = {
             patterns: [
                 { from: 'public', to: 'assets' }
             ]
-        })
+        }),
+
+        new RemoveCommentsPlugin(),
     ]
     // 添加其他配置项...
 }
